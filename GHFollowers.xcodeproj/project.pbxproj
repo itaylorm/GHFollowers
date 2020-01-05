@@ -22,6 +22,7 @@
 		34EA349723C29D3D00A92EE3 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA349623C29D3D00A92EE3 /* GFBodyLabel.swift */; };
 		34EA349923C29E5800A92EE3 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA349823C29E5800A92EE3 /* GFAlertVC.swift */; };
 		34EA349B23C2A58B00A92EE3 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */; };
+		34EA34A123C2AB7B00A92EE3 /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A023C2AB7B00A92EE3 /* GFContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		34EA349623C29D3D00A92EE3 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		34EA349823C29E5800A92EE3 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		34EA34A023C2AB7B00A92EE3 /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,24 +76,57 @@
 		34EA347123C2461A00A92EE3 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				34EA349C23C2A95800A92EE3 /* Controllers */,
+				34EA349E23C2A9C100A92EE3 /* Extensions */,
+				34EA348023C2461B00A92EE3 /* Info.plist */,
+				34EA349F23C2AA2200A92EE3 /* Support */,
+				34EA349D23C2A99100A92EE3 /* Views */,
+			);
+			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		34EA349C23C2A95800A92EE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34EA348823C2552E00A92EE3 /* FavoritesVC.swift */,
+				34EA348E23C2915100A92EE3 /* FollowerListVC.swift */,
+				34EA348623C254FC00A92EE3 /* SearchVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		34EA349D23C2A99100A92EE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34EA349823C29E5800A92EE3 /* GFAlertVC.swift */,
+				34EA349623C29D3D00A92EE3 /* GFBodyLabel.swift */,
+				34EA348A23C25E2000A92EE3 /* GFButton.swift */,
+				34EA348C23C2628800A92EE3 /* GFTextField.swift */,
+				34EA349423C29B4C00A92EE3 /* GFTitleLabel.swift */,
+				34EA34A023C2AB7B00A92EE3 /* GFContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34EA349E23C2A9C100A92EE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34EA349023C2958A00A92EE3 /* String+Ext.swift */,
+				34EA349223C298CA00A92EE3 /* UITextField+Ext.swift */,
+				34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		34EA349F23C2AA2200A92EE3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				34EA347223C2461A00A92EE3 /* AppDelegate.swift */,
 				34EA347423C2461A00A92EE3 /* SceneDelegate.swift */,
 				34EA347B23C2461B00A92EE3 /* Assets.xcassets */,
 				34EA347D23C2461B00A92EE3 /* LaunchScreen.storyboard */,
-				34EA348023C2461B00A92EE3 /* Info.plist */,
-				34EA348623C254FC00A92EE3 /* SearchVC.swift */,
-				34EA348823C2552E00A92EE3 /* FavoritesVC.swift */,
-				34EA348A23C25E2000A92EE3 /* GFButton.swift */,
-				34EA348C23C2628800A92EE3 /* GFTextField.swift */,
-				34EA348E23C2915100A92EE3 /* FollowerListVC.swift */,
-				34EA349023C2958A00A92EE3 /* String+Ext.swift */,
-				34EA349223C298CA00A92EE3 /* UITextField+Ext.swift */,
-				34EA349423C29B4C00A92EE3 /* GFTitleLabel.swift */,
-				34EA349623C29D3D00A92EE3 /* GFBodyLabel.swift */,
-				34EA349823C29E5800A92EE3 /* GFAlertVC.swift */,
-				34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */,
 			);
-			path = GHFollowers;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +206,7 @@
 				34EA349323C298CA00A92EE3 /* UITextField+Ext.swift in Sources */,
 				34EA349923C29E5800A92EE3 /* GFAlertVC.swift in Sources */,
 				34EA348B23C25E2000A92EE3 /* GFButton.swift in Sources */,
+				34EA34A123C2AB7B00A92EE3 /* GFContainerView.swift in Sources */,
 				34EA347323C2461A00A92EE3 /* AppDelegate.swift in Sources */,
 				34EA349723C29D3D00A92EE3 /* GFBodyLabel.swift in Sources */,
 				34EA348F23C2915100A92EE3 /* FollowerListVC.swift in Sources */,
