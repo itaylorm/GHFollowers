@@ -10,7 +10,16 @@ import UIKit
 
 class FollowerListVC: UIViewController {
 
-    var userName: String!
+    var userName: String? {
+        willSet {
+            guard let username = newValue else { return }
+            configure(with: username)
+        }
+    }
+    
+    private func configure(with username: String) {
+        title = username
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
