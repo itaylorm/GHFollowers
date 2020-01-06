@@ -30,7 +30,7 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     func createDismissKeyboardTapGesture() {
@@ -67,6 +67,7 @@ class SearchVC: UIViewController {
     func configureTextField() {
         view.addSubview(userNameTextField)
         
+        userNameTextField.text = "SAllen0400"
         userNameTextField.delegate = self
         
         NSLayoutConstraint.activate([
