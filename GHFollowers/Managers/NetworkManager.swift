@@ -49,7 +49,15 @@ class NetworkManager {
                 
                 completed(followers, "Success")
                 
-            } catch {
+            } catch let DecodingError.keyNotFound(type, context) {
+                print("Type '\(type)' mismatch:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+                completed(nil, "The data recieved from the server contained a field that did not match. Please try again")
+            } catch let DecodingError.typeMismatch(type, context) {
+                print("Type '\(type)' mismatch:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+                completed(nil, "The data recieved from the server contained a field that had an unexpected value type. Please try again")
+            }  catch {
                 completed(nil, "The data recieved from the server was invalid. Please try again")
             }
             
