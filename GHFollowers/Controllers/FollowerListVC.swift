@@ -10,25 +10,29 @@ import UIKit
 
 class FollowerListVC: UIViewController {
 
-    var userName: String? {
-        willSet {
-            guard let username = newValue else { return }
-            configure(with: username)
-        }
+    enum Section {
+        case main
     }
     
-    var collectionView: UICollectionView!
+    var userName: String!
     
     private func configure(with username: String) {
         title = username
         
     }
     
+    var followers: [Follower] = []
+    var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
+    var page = 1
+    var hasMoreFollowers = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
-        getFollowers()
+        getFollowers(userName: userName, page: page)
+        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,28 +46,74 @@ class FollowerListVC: UIViewController {
     }
 
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout:UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+        
+        collectionView.delegate = self
+        
     }
     
-    func getFollowers() {
-        
-        if let userName = userName {
+    
+    func getFollowers(userName: String, page: Int) {
             
-            NetworkManager.shared.getFollowers(for: userName, page: 1) { result in
+        NetworkManager.shared.getFollowers(for: userName, page: page) { [weak self] result in
+            
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let followers):
                 
-                switch result {
-                case .success(let followers):
-                    print("Followers count: \(followers.count)")
-                    print(followers)
-                case .failure(let error):
-                    self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "OK")
-                }
-
+                if followers.count < 100 { self.hasMoreFollowers = false }
+                
+                self.followers.append(contentsOf: followers)
+                self.updateData()
+                print("Followers count: \(followers.count)")
+                print(followers)
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "OK")
             }
+
         }
     }
     
+    func configureDataSource() {
+        
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: {
+            (collectionView, IndexPath, follower) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: IndexPath) as! FollowerCell
+            cell.set(follower: follower)
+            return cell
+            
+        })
+    }
+    
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section,Follower>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(followers)
+        
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot, animatingDifferences: true)
+        }
+
+    }
+    
+}
+
+extension FollowerListVC: UICollectionViewDelegate {
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        
+        if offsetY > contentHeight - height {
+            guard hasMoreFollowers else { return }
+            page += 1
+            getFollowers(userName: userName, page: page)
+        }
+    }
 }
