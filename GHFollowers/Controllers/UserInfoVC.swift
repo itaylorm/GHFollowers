@@ -10,6 +10,8 @@ import UIKit
 
 class UserInfoVC: UIViewController {
 
+    let headerVew = UIView()
+    
     var userName: String!
     
     override func viewDidLoad() {
@@ -24,14 +26,39 @@ class UserInfoVC: UIViewController {
             
             switch result {
             case .success(let user):
-                print(user)
+                DispatchQueue.main.async {
+                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerVew)
+                }
+
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "OK")
                 break
             }
         }
+        
+        layoutUI()
+    }
+    
+    func layoutUI() {
+        view.addSubview(headerVew)
+        
+        headerVew.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            headerVew.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerVew.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            headerVew.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerVew.heightAnchor.constraint(equalToConstant: 180)
+        ])
     }
 
+    func add(childVC: UIViewController, to containerView: UIView) {
+        addChild(childVC)
+        containerView.addSubview(childVC.view)
+        childVC.view.frame = containerView.bounds
+        childVC.didMove(toParent: self)
+    }
+    
     @objc func dismissVC() {
         dismiss(animated: true)
     }
