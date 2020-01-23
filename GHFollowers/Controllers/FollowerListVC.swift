@@ -79,11 +79,11 @@ class FollowerListVC: UIViewController {
             self.dismissLoadingView()
             
             switch result {
-            case .success(let followers):
+            case .success(let nextFollowers):
                 
-                if followers.count < 100 { self.hasMoreFollowers = false }
+                if nextFollowers.count < 100 { self.hasMoreFollowers = false }
                 
-                self.followers.append(contentsOf: followers)
+                self.followers.append(contentsOf: nextFollowers)
                 
                 if self.followers.isEmpty {
                     let message = "This user does not have any followers. Go follow them."
@@ -94,7 +94,7 @@ class FollowerListVC: UIViewController {
                     }
                 }
                 
-                self.updateData(on: followers)
+                self.updateData(on: self.followers)
 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad Stuff Happened", message: error.rawValue, buttonTitle: "OK")
