@@ -19,6 +19,7 @@
 		34C4555023DB9AFF00963C49 /* GFItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4554F23DB9AFF00963C49 /* GFItemInfoVC.swift */; };
 		34C4555223DB9DE200963C49 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4555123DB9DE200963C49 /* GFRepoItemVC.swift */; };
 		34C4555423DBA04300963C49 /* GFFollwerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4555323DBA04300963C49 /* GFFollwerItemVC.swift */; };
+		34C4555623DBA5D500963C49 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C4555523DBA5D500963C49 /* Date+Ext.swift */; };
 		34CDC57B23C621AE008D7DC7 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CDC57A23C621AE008D7DC7 /* UIHelper.swift */; };
 		34EA347323C2461A00A92EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA347223C2461A00A92EE3 /* AppDelegate.swift */; };
 		34EA347523C2461A00A92EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA347423C2461A00A92EE3 /* SceneDelegate.swift */; };
@@ -55,6 +56,7 @@
 		34C4554F23DB9AFF00963C49 /* GFItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoVC.swift; sourceTree = "<group>"; };
 		34C4555123DB9DE200963C49 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		34C4555323DBA04300963C49 /* GFFollwerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollwerItemVC.swift; sourceTree = "<group>"; };
+		34C4555523DBA5D500963C49 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		34CDC57A23C621AE008D7DC7 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		34EA346F23C2461A00A92EE3 /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EA347223C2461A00A92EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				34EA349023C2958A00A92EE3 /* String+Ext.swift */,
 				34EA349223C298CA00A92EE3 /* UITextField+Ext.swift */,
 				34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */,
+				34C4555523DBA5D500963C49 /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				34EA349123C2958A00A92EE3 /* String+Ext.swift in Sources */,
 				34C4555223DB9DE200963C49 /* GFRepoItemVC.swift in Sources */,
+				34C4555623DBA5D500963C49 /* Date+Ext.swift in Sources */,
 				34EA34A423C2B8BB00A92EE3 /* Follower.swift in Sources */,
 				34C4555023DB9AFF00963C49 /* GFItemInfoVC.swift in Sources */,
 				34C4555423DBA04300963C49 /* GFFollwerItemVC.swift in Sources */,
