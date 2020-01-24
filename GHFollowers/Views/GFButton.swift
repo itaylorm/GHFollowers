@@ -8,16 +8,13 @@
 
 import UIKit
 
-
 class GFButton: UIButton {
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
         
     }
-    
     
     /// Used for storyboard when placed on story board
     /// Required or won't compile

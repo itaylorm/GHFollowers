@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349DA3C023DB22A8005A6405 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */; };
 		34A9337823D9EC53007704E2 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */; };
 		34A9337A23D9ECC3007704E2 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */; };
 		34A9337C23D9F542007704E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337B23D9F542007704E2 /* Constants.swift */; };
@@ -35,9 +36,11 @@
 		34EA34A423C2B8BB00A92EE3 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A323C2B8BB00A92EE3 /* Follower.swift */; };
 		34EA34A623C2B97900A92EE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A523C2B97900A92EE3 /* User.swift */; };
 		34FE405223C8B2A900ACE36A /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE405123C8B2A900ACE36A /* GFEmptyStateView.swift */; };
+		44B37429529B6CA146EE4777 /* libPods-GHFollowers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF0E4464047196960351A5 /* libPods-GHFollowers.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		34A9337B23D9F542007704E2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		34EA34A323C2B8BB00A92EE3 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		34EA34A523C2B97900A92EE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		34FE405123C8B2A900ACE36A /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		472710FB0CD11E0097886941 /* Pods-GHFollowers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHFollowers.debug.xcconfig"; path = "Target Support Files/Pods-GHFollowers/Pods-GHFollowers.debug.xcconfig"; sourceTree = "<group>"; };
+		C3DF0E4464047196960351A5 /* libPods-GHFollowers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHFollowers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDF69FA91D00131655BAAA1 /* Pods-GHFollowers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHFollowers.release.xcconfig"; path = "Target Support Files/Pods-GHFollowers/Pods-GHFollowers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +81,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B37429529B6CA146EE4777 /* libPods-GHFollowers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BB67D3711D21853F3D91565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DF0E4464047196960351A5 /* libPods-GHFollowers.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		34B059FC23C387F80012902D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,8 @@
 			children = (
 				34EA347123C2461A00A92EE3 /* GHFollowers */,
 				34EA347023C2461A00A92EE3 /* Products */,
+				70CE83EBDBE6F45F175F0304 /* Pods */,
+				1BB67D3711D21853F3D91565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +172,7 @@
 				34B05A0423C3C1790012902D /* GFAvatarImageView.swift */,
 				34FE405123C8B2A900ACE36A /* GFEmptyStateView.swift */,
 				34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */,
+				349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +207,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		70CE83EBDBE6F45F175F0304 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				472710FB0CD11E0097886941 /* Pods-GHFollowers.debug.xcconfig */,
+				EBDF69FA91D00131655BAAA1 /* Pods-GHFollowers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34EA348323C2461B00A92EE3 /* Build configuration list for PBXNativeTarget "GHFollowers" */;
 			buildPhases = (
+				BCA8F5820C185BDA2A31DC48 /* [CP] Check Pods Manifest.lock */,
 				34EA346B23C2461A00A92EE3 /* Sources */,
 				34EA346C23C2461A00A92EE3 /* Frameworks */,
 				34EA346D23C2461A00A92EE3 /* Resources */,
+				34764FA023DB4C2300C2C12F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,6 +283,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34764FA023DB4C2300C2C12F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which ${PODS_ROOT}/SwiftLint/swiftlint >/dev/null; then\n  ${PODS_ROOT}/SwiftLint/swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		BCA8F5820C185BDA2A31DC48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GHFollowers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34EA346B23C2461A00A92EE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,6 +343,7 @@
 				34EA349323C298CA00A92EE3 /* UITextField+Ext.swift in Sources */,
 				34EA349923C29E5800A92EE3 /* GFAlertVC.swift in Sources */,
 				34EA348B23C25E2000A92EE3 /* GFButton.swift in Sources */,
+				349DA3C023DB22A8005A6405 /* GFItemInfoView.swift in Sources */,
 				34EA34A123C2AB7B00A92EE3 /* GFContainerView.swift in Sources */,
 				34B059FE23C388160012902D /* NetworkManager.swift in Sources */,
 				34A9337A23D9ECC3007704E2 /* GFSecondaryTitleLabel.swift in Sources */,
@@ -418,6 +490,7 @@
 		};
 		34EA348423C2461B00A92EE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472710FB0CD11E0097886941 /* Pods-GHFollowers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +509,7 @@
 		};
 		34EA348523C2461B00A92EE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBDF69FA91D00131655BAAA1 /* Pods-GHFollowers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -105,17 +105,21 @@ class FollowerListVC: UIViewController {
     
     func configureDataSource() {
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: {
-            (collectionView, IndexPath, follower) -> UICollectionViewCell? in
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: IndexPath) as! FollowerCell
-            cell.set(follower: follower)
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(
+            collectionView: collectionView, cellProvider: { (collectionView, indexPath, follower) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as? FollowerCell
+            
+            if let cell = cell {
+                cell.set(follower: follower)
+            }
+
             return cell
             
         })
     }
     
     func updateData(on followers: [Follower]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section,Follower>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
         
@@ -133,7 +137,6 @@ extension FollowerListVC: UICollectionViewDelegate {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
-        
         
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }

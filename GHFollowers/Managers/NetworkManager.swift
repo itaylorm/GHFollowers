@@ -28,7 +28,7 @@ class NetworkManager {
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         
-            if let _ = error {
+            if error != nil {
                 completed(.failure(.unableToComplete))
                 return
             }
@@ -78,7 +78,6 @@ class NetworkManager {
         
     }
     
-    
     func getUserInfo(for username: String, completed: @escaping(Result<User, GFError>) -> Void) {
         let endpoint = baseUrl + "\(username)"
         
@@ -90,7 +89,7 @@ class NetworkManager {
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         
-            if let _ = error {
+            if error != nil {
                 completed(.failure(.unableToComplete))
                 return
             }
