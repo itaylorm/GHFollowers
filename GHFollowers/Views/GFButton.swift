@@ -18,7 +18,7 @@ class GFButton: UIButton {
     
     /// Used for storyboard when placed on story board
     /// Required or won't compile
-    /// - Parameter coder: <#coder description#>
+    /// - Parameter coder: coder reference
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
