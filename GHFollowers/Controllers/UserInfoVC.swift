@@ -10,24 +10,35 @@ import UIKit
 
 class UserInfoVC: UIViewController {
 
-    let headerVew = UIView()
+    let headerView = UIView()
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
+    var itemViews = [UIView]()
     
     var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewController()
+        layoutUI()
+        getUserInfo()
+    }
+    
+    func configureViewController() {
         view.backgroundColor = .systemBackground
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
-        
+    }
+    
+    func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: userName) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
             case .success(let user):
                 DispatchQueue.main.async {
-                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerVew)
+                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
                 }
 
             case .failure(let error):
@@ -35,20 +46,39 @@ class UserInfoVC: UIViewController {
                 break
             }
         }
-        
-        layoutUI()
     }
     
     func layoutUI() {
-        view.addSubview(headerVew)
+        let padding: CGFloat = 20
+        let itemHeight: CGFloat = 140
+        itemViews = [headerView, itemViewOne, itemViewTwo]
         
-        headerVew.translatesAutoresizingMaskIntoConstraints = false
+        for itemView in itemViews {
+            view.addSubview(itemView)
+            itemView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                itemView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+                itemView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            ])
+        }
+        
+        itemViewOne.backgroundColor = .systemPink
+        itemViewTwo.backgroundColor = .systemBlue
+        
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        itemViewOne.translatesAutoresizingMaskIntoConstraints = false
+        itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            headerVew.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerVew.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerVew.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            headerVew.heightAnchor.constraint(equalToConstant: 180)
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 180),
+            
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
+            
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
         ])
     }
 
