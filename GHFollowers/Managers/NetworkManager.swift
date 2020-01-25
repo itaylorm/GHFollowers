@@ -108,7 +108,6 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                print(data)
                 let user = try decoder.decode(User.self, from: data)
                 
                 completed(.success(user))
