@@ -154,14 +154,14 @@
 		34EA347123C2461A00A92EE3 /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				34DCC27723DC81FB00408CDB /* Screens */,
-				34B059FF23C3B50F0012902D /* Utilities */,
+				34EA348023C2461B00A92EE3 /* Info.plist */,
+				34EA349E23C2A9C100A92EE3 /* Extensions */,
 				34B059FC23C387F80012902D /* Managers */,
 				34EA34A223C2B7C800A92EE3 /* Models */,
-				34EA349C23C2A95800A92EE3 /* Controllers */,
-				34EA349E23C2A9C100A92EE3 /* Extensions */,
-				34EA348023C2461B00A92EE3 /* Info.plist */,
+				34DCC27723DC81FB00408CDB /* Screens */,
 				34EA349F23C2AA2200A92EE3 /* Support */,
+				34B059FF23C3B50F0012902D /* Utilities */,
+				34EA349C23C2A95800A92EE3 /* Controllers */,
 				34EA349D23C2A99100A92EE3 /* Views */,
 			);
 			path = GHFollowers;
