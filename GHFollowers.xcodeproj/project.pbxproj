@@ -41,6 +41,8 @@
 		34EA34A123C2AB7B00A92EE3 /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A023C2AB7B00A92EE3 /* GFContainerView.swift */; };
 		34EA34A423C2B8BB00A92EE3 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A323C2B8BB00A92EE3 /* Follower.swift */; };
 		34EA34A623C2B97900A92EE3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EA34A523C2B97900A92EE3 /* User.swift */; };
+		34FB063323E4EB0A00382BFD /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB063223E4EB0A00382BFD /* GFTabBarController.swift */; };
+		34FB063923E505F600382BFD /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB063823E505F600382BFD /* GFDataLoadingVC.swift */; };
 		34FE405223C8B2A900ACE36A /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE405123C8B2A900ACE36A /* GFEmptyStateView.swift */; };
 		44B37429529B6CA146EE4777 /* libPods-GHFollowers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DF0E4464047196960351A5 /* libPods-GHFollowers.a */; };
 /* End PBXBuildFile section */
@@ -82,6 +84,8 @@
 		34EA34A023C2AB7B00A92EE3 /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
 		34EA34A323C2B8BB00A92EE3 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		34EA34A523C2B97900A92EE3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		34FB063223E4EB0A00382BFD /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		34FB063823E505F600382BFD /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 		34FE405123C8B2A900ACE36A /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		472710FB0CD11E0097886941 /* Pods-GHFollowers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHFollowers.debug.xcconfig"; path = "Target Support Files/Pods-GHFollowers/Pods-GHFollowers.debug.xcconfig"; sourceTree = "<group>"; };
 		C3DF0E4464047196960351A5 /* libPods-GHFollowers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHFollowers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,8 @@
 				34C4554F23DB9AFF00963C49 /* GFItemInfoVC.swift */,
 				34C4555123DB9DE200963C49 /* GFRepoItemVC.swift */,
 				34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */,
+				34FB063223E4EB0A00382BFD /* GFTabBarController.swift */,
+				34FB063823E505F600382BFD /* GFDataLoadingVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				34C4555623DBA5D500963C49 /* Date+Ext.swift in Sources */,
 				34EA34A423C2B8BB00A92EE3 /* Follower.swift in Sources */,
 				34C4555023DB9AFF00963C49 /* GFItemInfoVC.swift in Sources */,
+				34FB063923E505F600382BFD /* GFDataLoadingVC.swift in Sources */,
 				34C4555423DBA04300963C49 /* GFFollowerItemVC.swift in Sources */,
 				34EA349B23C2A58B00A92EE3 /* UIViewController+Ext.swift in Sources */,
 				34B05A0323C3C0B80012902D /* FollowerCell.swift in Sources */,
@@ -378,6 +385,7 @@
 				34DCC27923DCE5B700408CDB /* PersistenceManager.swift in Sources */,
 				34B059FE23C388160012902D /* NetworkManager.swift in Sources */,
 				34A9337A23D9ECC3007704E2 /* GFSecondaryTitleLabel.swift in Sources */,
+				34FB063323E4EB0A00382BFD /* GFTabBarController.swift in Sources */,
 				34EA347323C2461A00A92EE3 /* AppDelegate.swift in Sources */,
 				34EA349723C29D3D00A92EE3 /* GFBodyLabel.swift in Sources */,
 				34FE405223C8B2A900ACE36A /* GFEmptyStateView.swift in Sources */,

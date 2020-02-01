@@ -13,7 +13,6 @@ class GFButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        
     }
     
     /// Used for storyboard when placed on story board
@@ -23,10 +22,9 @@ class GFButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(backgroundColor: UIColor, title: String) {
-        super.init(frame: .zero)
+    convenience init(backgroundColor: UIColor, title: String) {
+        self.init(frame: .zero)
         set(backgroundColor: backgroundColor, title: title)
-        configure()
     }
     
     func set(backgroundColor: UIColor, title: String) {

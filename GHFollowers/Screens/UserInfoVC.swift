@@ -63,7 +63,7 @@ class UserInfoVC: UIViewController {
         followerItemVC.delegate = self
         self.add(childVC: followerItemVC, to: self.itemViewTwo)
 
-        self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearDisplayFormat())"
+        self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
     }
     
     func layoutUI() {
