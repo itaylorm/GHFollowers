@@ -114,6 +114,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		345013FD23E8977500B90485 /* ItemInfo */ = {
+			isa = PBXGroup;
+			children = (
+				34C4555323DBA04300963C49 /* GFFollowerItemVC.swift */,
+				34C4555123DB9DE200963C49 /* GFRepoItemVC.swift */,
+				34C4554F23DB9AFF00963C49 /* GFItemInfoVC.swift */,
+				34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */,
+				34BB817523CCC63B00A98D21 /* UserInfoVC.swift */,
+			);
+			path = ItemInfo;
+			sourceTree = "<group>";
+		};
 		34B059FC23C387F80012902D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +151,6 @@
 				34EA348823C2552E00A92EE3 /* FavoritesListVC.swift */,
 				34EA348E23C2915100A92EE3 /* FollowerListVC.swift */,
 				34EA348623C254FC00A92EE3 /* SearchVC.swift */,
-				34BB817523CCC63B00A98D21 /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -181,11 +192,8 @@
 		34EA349C23C2A95800A92EE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				345013FD23E8977500B90485 /* ItemInfo */,
 				34EA349823C29E5800A92EE3 /* GFAlertVC.swift */,
-				34C4555323DBA04300963C49 /* GFFollowerItemVC.swift */,
-				34C4554F23DB9AFF00963C49 /* GFItemInfoVC.swift */,
-				34C4555123DB9DE200963C49 /* GFRepoItemVC.swift */,
-				34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */,
 				34FB063223E4EB0A00382BFD /* GFTabBarController.swift */,
 				34FB063823E505F600382BFD /* GFDataLoadingVC.swift */,
 			);

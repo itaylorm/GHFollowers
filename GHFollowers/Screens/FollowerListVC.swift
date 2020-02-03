@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol FollowerListVCDelegate: class {
-    func didRequestFollowers(for userName: String)
-}
-
 class FollowerListVC: GFDataLoadingVC {
 
     enum Section {
@@ -22,7 +18,6 @@ class FollowerListVC: GFDataLoadingVC {
     
     private func configure(with username: String) {
         title = username
-        
     }
     
     var followers: [Follower] = []
@@ -225,7 +220,7 @@ extension FollowerListVC: UISearchResultsUpdating {
     
 }
 
-extension FollowerListVC: FollowerListVCDelegate {
+extension FollowerListVC: UserInfoVCDelegate {
     func didRequestFollowers(for userName: String) {
         self.userName = userName
         title = userName
