@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345013FC23E88EF700B90485 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345013FB23E88EF700B90485 /* UIView+Ext.swift */; };
 		349DA3C023DB22A8005A6405 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */; };
 		34A9337823D9EC53007704E2 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */; };
 		34A9337A23D9ECC3007704E2 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		345013FB23E88EF700B90485 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				34EA349223C298CA00A92EE3 /* UITextField+Ext.swift */,
 				34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */,
 				34C4555523DBA5D500963C49 /* Date+Ext.swift */,
+				345013FB23E88EF700B90485 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				34E8A73D23DDFF8D007C4BFB /* FavoriteCell.swift in Sources */,
 				34EA348923C2552E00A92EE3 /* FavoritesListVC.swift in Sources */,
 				34BB817623CCC63B00A98D21 /* UserInfoVC.swift in Sources */,
+				345013FC23E88EF700B90485 /* UIView+Ext.swift in Sources */,
 				34EA349523C29B4C00A92EE3 /* GFTitleLabel.swift in Sources */,
 				34EA347523C2461A00A92EE3 /* SceneDelegate.swift in Sources */,
 				34CDC57B23C621AE008D7DC7 /* UIHelper.swift in Sources */,

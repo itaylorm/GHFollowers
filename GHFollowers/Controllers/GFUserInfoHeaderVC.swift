@@ -33,6 +33,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubviews(avatarImageView, userNameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         configureAvatarImageView()
         configureUserNameLabel()
         configureNameLabel()
@@ -59,8 +60,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureAvatarImageView() {
-        view.addSubview(avatarImageView)
-        
         NSLayoutConstraint.activate([
             avatarImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
             avatarImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -70,8 +69,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureUserNameLabel() {
-        view.addSubview(userNameLabel)
-        
         NSLayoutConstraint.activate([
             userNameLabel.topAnchor.constraint(equalTo: avatarImageView.topAnchor),
             userNameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
@@ -81,8 +78,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureNameLabel() {
-        view.addSubview(nameLabel)
-        
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: textImagePadding),
@@ -92,7 +87,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureLocationImageView() {
-        view.addSubview(locationImageView)
         locationImageView.image = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
         
@@ -107,8 +101,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureLocationLabel() {
-        view.addSubview(locationLabel)
-        
         NSLayoutConstraint.activate([
             locationLabel.centerYAnchor.constraint(equalTo: locationImageView.centerYAnchor),
             locationLabel.leadingAnchor.constraint(equalTo: locationImageView.trailingAnchor, constant: 5),
@@ -118,8 +110,6 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     func configureBioLabel() {
-        view.addSubview(bioLabel)
-        
         NSLayoutConstraint.activate([
             bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
             bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
