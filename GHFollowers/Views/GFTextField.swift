@@ -31,11 +31,7 @@ class GFTextField: UITextField {
         tintColor = .label
         textAlignment = .center
         font = UIFont.preferredFont(forTextStyle: .title2)
-        
-        // Allows text to shink for longer text when needed
         adjustsFontSizeToFitWidth = true
-        
-        // Don't shrink any more than this
         minimumFontSize = 12
         
         backgroundColor = .tertiarySystemBackground
