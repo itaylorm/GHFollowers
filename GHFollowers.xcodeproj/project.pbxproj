@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		345013FC23E88EF700B90485 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345013FB23E88EF700B90485 /* UIView+Ext.swift */; };
+		345013FF23E8A2CE00B90485 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345013FE23E8A2CE00B90485 /* UITableView+Ext.swift */; };
 		349DA3C023DB22A8005A6405 /* GFItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */; };
 		34A9337823D9EC53007704E2 /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */; };
 		34A9337A23D9ECC3007704E2 /* GFSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		345013FB23E88EF700B90485 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		345013FE23E8A2CE00B90485 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		349DA3BF23DB22A8005A6405 /* GFItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoView.swift; sourceTree = "<group>"; };
 		34A9337723D9EC53007704E2 /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		34A9337923D9ECC3007704E2 /* GFSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryTitleLabel.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				34EA349A23C2A58B00A92EE3 /* UIViewController+Ext.swift */,
 				34C4555523DBA5D500963C49 /* Date+Ext.swift */,
 				345013FB23E88EF700B90485 /* UIView+Ext.swift */,
+				345013FE23E8A2CE00B90485 /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				34B05A0323C3C0B80012902D /* FollowerCell.swift in Sources */,
 				34EA348D23C2628800A92EE3 /* GFTextField.swift in Sources */,
 				34A9337823D9EC53007704E2 /* GFUserInfoHeaderVC.swift in Sources */,
+				345013FF23E8A2CE00B90485 /* UITableView+Ext.swift in Sources */,
 				34B05A0123C3B5230012902D /* GFError.swift in Sources */,
 				34A9337C23D9F542007704E2 /* Constants.swift in Sources */,
 				34EA34A623C2B97900A92EE3 /* User.swift in Sources */,
