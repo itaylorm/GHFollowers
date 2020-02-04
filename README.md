@@ -6,12 +6,22 @@ This is my version of the code from SAllen0400's course. See the Original Course
 
 # Overview
 ## Login
+A user enters the name of someone for whom they wish to look for followers
+### Login Screen
 ![](https://github.com/itaylorm/GHFollowers/blob/master/Images/LoginXSMax.png)
+
 ## Followers
+A user then sees the list of followers belonging to the entered username.
+The user has the ability to favorite the current username using the plus button in the upper right corner
+### Followers Screen
 ![](https://github.com/itaylorm/GHFollowers/blob/master/Images/FollowersXSMax.png)
 ## Favorites
+User sees favorited users on the second tab
+### Favorites Screen
 ![](https://github.com/itaylorm/GHFollowers/blob/master/Images/FavoritesXSMax.png)
 ## User Details
+Selecting any follower results in the display of that user's details
+### User Details Screen
 ![](https://github.com/itaylorm/GHFollowers/blob/master/Images/UserXSMax.png)
 
 # How To Install
