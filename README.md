@@ -5,7 +5,14 @@ Proof of concept project for working with users and their followers on GitHub. T
 This is my version of the code from SAllen0400's course. See the Original Course titled "iOS Dev Job Interview Practice" which can be found here https://seanallen.teachable.com/courses
 
 # Overview
-![](https://github.com/itaylorm/GHFollowers/blob/master/Images/Login8Plus.png)
+## Login
+![](https://github.com/itaylorm/GHFollowers/blob/master/Images/LoginXSMax.png)
+## Followers
+![](https://github.com/itaylorm/GHFollowers/blob/master/Images/FollowersXSMax.png)
+## Favorites
+![](https://github.com/itaylorm/GHFollowers/blob/master/Images/FavoritesXSMax.png)
+## User Details
+![](https://github.com/itaylorm/GHFollowers/blob/master/Images/UserXSMax.png)
 
 # How To Install
 1. Open Terminal
