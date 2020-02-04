@@ -67,7 +67,6 @@ class SearchVC: UIViewController {
     }
     
     func configureTextField() {
-        userNameTextField.text = "SAllen0400"
         userNameTextField.delegate = self
         
         NSLayoutConstraint.activate([
